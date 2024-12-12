@@ -67,7 +67,7 @@ public class CordovaPluginExt extends CordovaPlugin {
         Method[] methods = this.getClass().getMethods();
         ArrayList<Method> methodList = new ArrayList<>(Arrays.asList(methods));
         
-        // Filter methods that have @JsMethod annotation.
+        // Filter methods that have @CordovaMethod annotation.
         Stream<Method> methodsStream = methodList.stream().filter(method -> {
             return method.isAnnotationPresent(CordovaMethod.class);
         });
